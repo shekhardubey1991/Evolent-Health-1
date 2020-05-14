@@ -1,0 +1,44 @@
+<div class="container">
+
+<h1>Contact's List</h1>
+
+<input class="search-box" type="text" [(ngModel)]="searchText" placeholder="search text goes here"> <br> <br>
+
+<div class="table-responsive">          
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>EmailId</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Active/Inactive List's</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let user of users | filter: {doctorname: searchText, emailid: searchText, phone: searchText, id: searchText}; let i=index;">
+        <!-- <tr *ngFor = "let user of users | filter: {specialization.id: searchText}; let i=index;"> -->
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.emailid}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.country}}</td>
+        <td *ngIf="user.isActive==true">Active</td>
+        <td *ngIf="user.isActive==false">Inactive</td>
+        <!-- <td>{{user.specialization[0].name}}</td> -->
+        <td class = "appointment" [routerLink] = "['/user-details']">Add New Contacts</td>
+        <td [routerLink] = "['/editContact', user.id]"><a>EDIT</a></td>
+        <td (click)="deleteContacts(user)"><a>DELETE</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

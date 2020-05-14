@@ -1,0 +1,13 @@
+<h2>Update Users</h2>
+
+<p *ngIf = "!exist">Users Doesn't Exist</p>
+
+<form id="userNewData" name="userNewData" #userData = "ngForm" (ngSubmit) = "editContact(userData.value)">
+  <label>Name: </label><input type="text" name="name" id="name" placeholder="name" [(ngModel)] = "data.name" ngModel><br>
+  <label>Email: </label><input type="email" name="emailid" id="emailid" placeholder="emailid" [(ngModel)] = "data.emailid" ngModel><br>
+  <label>Phone: </label><input type="tel" name="phone" id="phone" placeholder="phone" [(ngModel)] = "data.phone" ngModel><br>
+  <label>City: </label><input type="text" name="city" id="city" placeholder="city" [(ngModel)] = "data.city" ngModel><br>
+  <label>State: </label><input type="text" name="state" id="state" placeholder="state" [(ngModel)] = "data.state" ngModel><br>
+  <label>Country: </label><input type="text" name="country" id="country" placeholder="country" [(ngModel)] = "data.country" ngModel><br>
+  <input type="submit" value="Update User">
+</form>

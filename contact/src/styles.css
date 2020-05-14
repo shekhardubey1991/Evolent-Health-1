@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+table, th, td {
+    border: 1px solid #000;
+    font-size: 15px;
+    padding: 10px;
+}
+.table>tbody>tr>td {
+    border-top: 2px solid #ddd !important;
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: #d9edf7 !important;
+}
+
+form, label, input {
+    font-size: 15px;
+    padding: 10px;
+}
+
+input {
+    margin-top: 10px;
+}
+
+a {
+    color: blue;
+    font-size: 15px;
+}
+a:hover {
+    cursor: pointer;
+    color: blue;
+}
+form > label {
+    width: 100px;
+}
+.form-control {
+    width: auto !important;
+    display: inline-table !important;
+    margin-bottom: 10px;
+    cursor: pointer !important;
+}
+.appointment {
+    background: cadetblue;
+    color: #ffffff !important;
+}
+.search-box {
+    position: absolute;
+    top: 4px;
+    right: 200px;
+}
+.navbar-brand  {
+    padding: 0 !important;
+}
+.navbar-brand>img {
+    height: 50px;
+}
